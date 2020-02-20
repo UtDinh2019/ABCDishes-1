@@ -3,18 +3,23 @@
 require 'functions.php';
 require 'db_configuration.php';
 
-$query = "SELECT * FROM abcdishes_db";
+$query = "SELECT * FROM dishes";
 
 $GLOBALS['data'] = mysqli_query($db, $query);
-// $GLOBALS['topic'] = mysqli_query($db, $query);
-// $GLOBALS['puzzle'] = mysqli_query($db, $query);
-// $GLOBALS['choice_1'] = mysqli_query($db, $query);
-// $GLOBALS['choice_2'] = mysqli_query($db, $query);
-// $GLOBALS['choice_3'] = mysqli_query($db, $query);
-// $GLOBALS['choice_4'] = mysqli_query($db, $query);
-// $GLOBALS['answer'] = mysqli_query($db, $query);
-// $GLOBALS['puzzle_image'] = mysqli_query($db, $query);
+// $GLOBALS['ID'] = mysqli_query($db, $query);
+// $GLOBALS['Name'] = mysqli_query($db, $query);
+// $GLOBALS['Type'] = mysqli_query($db, $query);
+// $GLOBALS['State'] = mysqli_query($db, $query);
+// $GLOBALS['Country'] = mysqli_query($db, $query);
+// $GLOBALS['Description'] = mysqli_query($db, $query);
+// $GLOBALS['Receipe_links'] = mysqli_query($db, $query);
+// $GLOBALS['Video_links'] = mysqli_query($db, $query);
+// $GLOBALS['Status'] = mysqli_query($db, $query);
+// $GLOBALS['Notes'] = mysqli_query($db, $query);
+
 ?>
+
+
 
 <?php $page_title = 'Dishes list'; ?>
 <?php include('header.php'); 
@@ -100,19 +105,19 @@ $GLOBALS['data'] = mysqli_query($db, $query);
                     // output data of each row
                     while($row = $data->fetch_assoc()) {
                         echo '<tr>
-                                <td>'.$row["id"].'</td>
-                                <td>'.$row["names"].' </span> </td>
-                                <td>'.$row["type"].'</td>
-                                <td>'.$row["state"].'</td>
-                                <td>'.$row["country"].' </span> </td>
-                                <td>'.$row["description"].' </span> </td>
-                                <td>'.$row["receipe_links"].' </span> </td>
-                                <td>'.$row["video_links"].' </span> </td>
-                                <td>'.$row["status"].' </span> </td>
-                                <td>'.$row["notes"].' </span> </td>
+                                <td>'.$row["ID"].'</td>
+                                <td>'.$row["Name"].' </span> </td>
+                                <td>'.$row["Type"].'</td>
+                                <td>'.$row["State"].'</td>
+                                <td>'.$row["Country"].' </span> </td>
+                                <td>'.$row["Description"].' </span> </td>
+                                <td>'.$row["Receipe_links"].' </span> </td>
+                                <td>'.$row["Video_links"].' </span> </td>
+                                <td>'.$row["Status"].' </span> </td>
+                                <td>'.$row["Notes"].' </span> </td>
                                                                                                                      
-                                <td><a class="btn btn-warning btn-sm" href="modifyPuzzle.php?id='.$row["id"].'">Modify</a></td>
-                                <td><a class="btn btn-danger btn-sm" href="deletePuzzle.php?id='.$row["id"].'">Delete</a></td>
+                                <td><a class="btn btn-warning btn-sm" href="modifyPuzzle.php?id='.$row["ID"].'">Modify</a></td>
+                                <td><a class="btn btn-danger btn-sm" href="deletePuzzle.php?id='.$row["ID"].'">Delete</a></td>
                             </tr>';
                     }//end while
                 }//end if
