@@ -78,9 +78,15 @@ $GLOBALS['data'] = mysqli_query($db, $query);
             }
         }
 
-        if(isset($_GET['questionDeleted'])){
-            if($_GET["questionDeleted"] == "Success"){
-                echo '<br><h3>Success! Your topic has been addedTEST TEST!</h3>';
+        if(isset($_GET['dishDeleted'])){
+            if($_GET["dishDeleted"] == "Success"){
+                echo '<br><h3>Success! Your dish has been deleted!</h3>';
+            }
+        }
+
+        if(isset($_GET['dishUpdated'])){
+            if($_GET["dishUpdated"] == "Success"){
+                echo '<br><h3>Success! Your dish has been updated!</h3>';
             }
         }
     ?>
