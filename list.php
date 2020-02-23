@@ -1,5 +1,8 @@
 <?php
-
+  $nav_selected = "LIST";
+  $left_buttons = "NO";
+  $left_selected = "";
+  
 require 'functions.php';
 require 'db_configuration.php';
 
@@ -12,17 +15,18 @@ $GLOBALS['data'] = mysqli_query($db, $query);
 // $GLOBALS['State'] = mysqli_query($db, $query);
 // $GLOBALS['Country'] = mysqli_query($db, $query);
 // $GLOBALS['Description'] = mysqli_query($db, $query);
-// $GLOBALS['Receipe_links'] = mysqli_query($db, $query);
+// $GLOBALS['Recipe_links'] = mysqli_query($db, $query);
 // $GLOBALS['Video_links'] = mysqli_query($db, $query);
 // $GLOBALS['Status'] = mysqli_query($db, $query);
 // $GLOBALS['Notes'] = mysqli_query($db, $query);
-
+  include("./nav.php");
+  
 ?>
 
-
+<?php include("./footer.php"); ?>
 
 <?php $page_title = 'Dishes list'; ?>
-<?php include('header.php'); 
+<?php 
     $page="list.php";
     //verifyLogin($page);
 ?>
@@ -96,7 +100,7 @@ $GLOBALS['data'] = mysqli_query($db, $query);
                     <th>State</th>
                     <th>Country</th>
                     <th>Description</th>
-                    <th>Receipe links</th>
+                    <th>Recipe links</th>
                     <th>Video links</th>                
                     <th>Status</th>
                     <th>Notes</th>
