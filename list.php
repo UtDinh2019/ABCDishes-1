@@ -54,21 +54,21 @@ $GLOBALS['data'] = mysqli_query($db, $query);
 <br><br>
 <div class="container-fluid">
 <?php
-        if(isset($_GET['createPuzzle'])){
-            if($_GET["createPuzzle"] == "Success"){
-                echo '<br><h3>Success! Your puzzle has been added!</h3>';
+        if(isset($_GET['createDishes'])){
+            if($_GET["createDishes"] == "Success"){
+                echo '<br><h3>Success! Your dish has been added!</h3>';
             }
         }
 
-        if(isset($_GET['puzzleUpdated'])){
-            if($_GET["puzzleUpdated"] == "Success"){
-                echo '<br><h3>Success! Your puzzle has been modified!</h3>';
+        if(isset($_GET['dishUpdated'])){
+            if($_GET["dishUpdated"] == "Success"){
+                echo '<br><h3>Success! Your dish has been modified!</h3>';
             }
         }
 
-        if(isset($_GET['puzzleDeleted'])){
-            if($_GET["puzzleDeleted"] == "Success"){
-                echo '<br><h3>Success! Your puzzle has been deleted!</h3>';
+        if(isset($_GET['dishDeleted'])){
+            if($_GET["dishDeleted"] == "Success"){
+                echo '<br><h3>Success! Your dish has been deleted!</h3>';
             }
         }
 
@@ -95,7 +95,7 @@ $GLOBALS['data'] = mysqli_query($db, $query);
     <h2 id="title">Dishes List</h2><br>
     
     <div id="customerTableView">
-        <button><a class="btn btn-sm" href="createPuzzle.php">Create a Dish</a></button>
+        <button><a class="btn btn-sm" href="createDish.php">Create a Dish</a></button>
         <table class="display" id="ceremoniesTable" style="width:100%">
             <div class="table responsive">
                 <thead>
