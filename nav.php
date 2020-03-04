@@ -45,7 +45,7 @@
                 <br/>List Dishes</li>
             </a>
       
-            <a href="scanner.php">
+            <a href="Summary.php">
               <li <?php if($nav_selected == "SUMMARY"){ echo 'class="current-page"'; } ?>>
                 <img src="./images/reports_summary.png">
                 <br/>Summary</li>
@@ -79,8 +79,8 @@
                 include("./left_menu_timeline.php");
             } elseif ($nav_selected == "REPORTS") {
                 include("./left_menu_reports.php");
-            } elseif ($nav_selected == "SCANNER") {
-                include("./left_menu_scanner.php");
+            } elseif ($nav_selected == "Summary") {
+                include("./left_menu_Summary.php");
             } elseif ($nav_selected == "HISTORY") {
                 include("./left_menu_history.php");
             } elseif ($nav_selected == "TREND") {
