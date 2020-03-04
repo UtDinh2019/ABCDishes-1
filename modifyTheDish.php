@@ -14,6 +14,8 @@ if (isset($_POST['ID'])){
     $video_links = mysqli_real_escape_string($db, $_POST['Video_links']);
     $status = mysqli_real_escape_string($db, $_POST['Status']);
     $notes = mysqli_real_escape_string($db, $_POST['Notes']);
+    $image = basename($_FILES["Image"]["name"]);
+    
 
     $sql = "UPDATE dishes
     SET Name = '$name',
@@ -24,7 +26,8 @@ if (isset($_POST['ID'])){
         Recipe_links = '$recipe_links',
         Video_links = '$video_links',
         Status = '$status',
-        Notes = '$notes'
+        Notes = '$notes',
+        Image = '$image'
 
     WHERE id = '$id'";
 

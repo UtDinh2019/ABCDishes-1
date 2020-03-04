@@ -17,14 +17,18 @@
     $Recipe_links = mysqli_real_escape_string($db,$_POST['Recipe_links']);
 	$Status = mysqli_real_escape_string($db,$_POST['Status']);
     $Notes = mysqli_real_escape_string($db,$_POST['Notes']);
+    $Image = basename($_FILES["Image"]["name"]);
+
+
+
     $validate = true;    
     
 
     $sql = "INSERT INTO dishes(Name, Type, State, Country, Description, Recipe_links, 
-        Video_links, Status, Notes)
+        Video_links, Status, Notes, Image)
 
     VALUES ('$Names','$Type','$State','$Country','$Description','$Recipe_links',
-        '$Video_links','$Status','$Notes')
+        '$Video_links','$Status','$Notes', '$Image')
     ";
 
     mysqli_query($db, $sql);

@@ -44,21 +44,19 @@
                 <img src="./images/list.png">
                 <br/>List Dishes</li>
             </a>
-
-           
       
             <a href="scanner.php">
-              <li <?php if($nav_selected == "SCANNER"){ echo 'class="current-page"'; } ?>>
-                <img src="./images/scanner.png">
-                <br/>Scanner</li>
+              <li <?php if($nav_selected == "SUMMARY"){ echo 'class="current-page"'; } ?>>
+                <img src="./images/reports_summary.png">
+                <br/>Summary</li>
             </a>
 
 
-        <a href="about.php">
-          <li <?php if($nav_selected == "ABOUT"){ echo 'class="current-page"'; } ?>>
-            <img src="./images/about.png">
-            <br/>About</li>
-        </a>
+            <a href="about.php">
+             <li <?php if($nav_selected == "ABOUT"){ echo 'class="current-page"'; } ?>>
+              <img src="./images/about.png">
+              <br/>About</li>
+            </a>
 
       </ul>
       <br />

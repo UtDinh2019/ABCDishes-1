@@ -14,7 +14,7 @@
   include("./nav.php");
     require 'bin/functions.php';
     require 'db_configuration.php';
-    include('header.php');
+   // include('header.php');
     $page="list.php";
     //verifyLogin($page);
 
@@ -111,6 +111,14 @@ if ($result->num_rows > 0) {
         <label for="description">Notes</label>
         <input type="text" class="form-control" name="Notes" value="'.$row["Notes"].'"  maxlength="255" style=width:400px required><br>
       </div>
+
+      <div class="form-group col-md-4">
+      <label for="cadence">New Image</label>
+      <input type="file" name="Image" id="Image" maxlength="255">
+      </div>
+      <input type="hidden" class="form-control" name="Image" value="'.$row["Image"].'" maxlength="255" required>
+
+  
 
       
 

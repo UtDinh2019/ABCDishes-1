@@ -3,7 +3,7 @@
 <?php
     require 'bin/functions.php';
     require 'db_configuration.php';
-    include('header.php');
+    //include('header.php');
     $page="list.php";
 
 ?>
@@ -80,6 +80,11 @@ if ($result->num_rows > 0) {
     <div class="form-group col-md-12">
     <label for="description">Notes</label>
     <input type="text" class="form-control" name="Notes" value="'.$row["Notes"].'"  maxlength="255" readonly>
+  </div>
+
+  <div class="form-group col-md-4">
+  <label for="cadence">Image</label>
+  <input type="text" class="form-control" name="Image" value="'.$row["Image"].'"  maxlength="255" readonly>
   </div>
 
     <br>

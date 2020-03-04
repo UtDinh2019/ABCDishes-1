@@ -10,13 +10,12 @@
   // set the left menu button selected; options will change based on the main selection
   $left_selected = "";
 
-  include("./nav.php");
+    include("./nav.php");
     require 'bin/functions.php';
     require 'db_configuration.php';
-    include('header.php'); 
+   // include('header.php'); 
 	
     $page="list.php";   
-    verifyLogin($page); 
 
 ?>
 <?php 
@@ -99,6 +98,11 @@
             <tr>
                 <td style="width:100px">Notes:</td>
                 <td><input type="text"  name="Notes" maxlength="50" size="50" required title="Please enter notes about the Notes."></td>
+            </tr>
+             <!-- Image -->
+            <tr>
+                <td style="width:100px">Image:</td>
+                <td><input type="file" name="Image" id="Image" maxlength="50" size="50" title="Enter the image"></td>
             </tr>
 			
         </table>

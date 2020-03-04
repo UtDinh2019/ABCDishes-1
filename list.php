@@ -19,6 +19,7 @@ $GLOBALS['data'] = mysqli_query($db, $query);
 // $GLOBALS['Video_links'] = mysqli_query($db, $query);
 // $GLOBALS['Status'] = mysqli_query($db, $query);
 // $GLOBALS['Notes'] = mysqli_query($db, $query);
+// $GLOBALS['Image'] = mysqli_query($db, $query);
   include("./nav.php");
   
 ?>
@@ -72,23 +73,6 @@ $GLOBALS['data'] = mysqli_query($db, $query);
             }
         }
 
-        if(isset($_GET['createTopic'])){
-            if($_GET["createTopic"] == "Success"){
-                echo '<br><h3>Success! Your topic has been added!</h3>';
-            }
-        }
-
-        if(isset($_GET['dishDeleted'])){
-            if($_GET["dishDeleted"] == "Success"){
-                echo '<br><h3>Success! Your dish has been deleted!</h3>';
-            }
-        }
-
-        if(isset($_GET['dishUpdated'])){
-            if($_GET["dishUpdated"] == "Success"){
-                echo '<br><h3>Success! Your dish has been updated!</h3>';
-            }
-        }
     ?>
    
    
@@ -110,6 +94,7 @@ $GLOBALS['data'] = mysqli_query($db, $query);
                     <th>Video links</th>                
                     <th>Status</th>
                     <th>Notes</th>
+                    <th>Image</th>
                     <th>Modify</th>
                     <th>Delete</th>
                 </tr>
@@ -131,6 +116,9 @@ $GLOBALS['data'] = mysqli_query($db, $query);
                                 <td>'.$row["Video_links"].' </span> </td>
                                 <td>'.$row["Status"].' </span> </td>
                                 <td>'.$row["Notes"].' </span> </td>
+                                <td><img src="images/' .$row["Image"]. '">
+
+
                                                                                                                      
                                 <td><a class="btn btn-warning btn-sm" href="modifyDish.php?id='.$row["ID"].'">Modify</a></td>
                                 <td><a class="btn btn-danger btn-sm" href="deleteDish.php?id='.$row["ID"].'">Delete</a></td>
