@@ -1,3 +1,5 @@
+
+
 <?php $page_title = 'Puzzles > Create Puzzle'; ?>
 <?php 
 
@@ -91,13 +93,18 @@
             </tr>
             <!-- Status -->
             <tr>
-                <td style="width:100px">Status:</td>
-                <td><input type="text"  name="Status" maxlength="50" size="50" required title="Please enter notes about the Status."></td>
-            </tr>
+<label>Status:      
+<input list="status" name="myStatus" maxlength="60" size="56" paddin: 100px />
+<datalist id="status">
+  <option value="Proposed">
+  <option value="Approved">
+  <option value="Reviewed">
+</datalist>
+</tr>
 			 <!-- Notes -->
             <tr>
                 <td style="width:100px">Notes:</td>
-                <td><input type="text"  name="Notes" maxlength="50" size="50" required title="Please enter notes about the Notes."></td>
+                <td><input style="height:200px;font-size:14pt" name="Notes" maxlength="60" height="200" size="50" required title="Please enter notes about the Notes."></td>
             </tr>
              <!-- Image -->
             <tr>

@@ -86,12 +86,12 @@ if ($result->num_rows > 0) {
         <label for="description">Country</label>
         <input type="text" class="form-control" name="Country" value="'.$row["Country"].'"  maxlength="255" style=width:400px required><br>
       </div>
-
+     
       <div>
-        <label for="description">Description</label>
-        <input type="text" class="form-control" name="Description" value="'.$row["Description"].'"  maxlength="255" style=width:400px required><br>
+      <label for="description">Description</label>
+      <input type="text" class="form-control" name="Description" value="'.$row["Description"].'"  maxlength="255" style=width:400px required><br>
       </div>
-
+      
       <div>
         <label for="description">Recipe_links</label>
         <input type="text" class="form-control" name="Recipe_links" value="'.$row["Recipe_links"].'"  maxlength="255" style=width:400px required><br>

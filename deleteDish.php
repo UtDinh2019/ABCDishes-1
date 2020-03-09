@@ -3,7 +3,14 @@
 <?php
     require 'bin/functions.php';
     require 'db_configuration.php';
-    //include('header.php');
+  
+  $nav_selected = "LIST";
+  $left_buttons = "NO";
+  $left_selected = "Bar Charts";
+
+  include("./nav.php");
+  
+
     $page="list.php";
 
 ?>

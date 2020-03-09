@@ -45,10 +45,16 @@
                 <br/>List Dishes</li>
             </a>
       
-            <a href="Summary.php">
-              <li <?php if($nav_selected == "SUMMARY"){ echo 'class="current-page"'; } ?>>
+            <a href="reports.php">
+              <li <?php if($nav_selected == "REPORTS"){ echo 'class="current-page"'; } ?>>
                 <img src="./images/reports_summary.png">
-                <br/>Summary</li>
+                <br/>Reports</li>
+            </a>
+
+            <a href="preferences.php">
+              <li <?php if($nav_selected == "PREFERENCES"){ echo 'class="current-page"'; } ?>>
+                <img src="./images/admin_configure.png">
+                <br/>Preferences</li>
             </a>
 
 
@@ -79,8 +85,8 @@
                 include("./left_menu_timeline.php");
             } elseif ($nav_selected == "REPORTS") {
                 include("./left_menu_reports.php");
-            } elseif ($nav_selected == "Summary") {
-                include("./left_menu_Summary.php");
+            } elseif ($nav_selected == "Reports") {
+                include("./left_menu_Reports.php");
             } elseif ($nav_selected == "HISTORY") {
                 include("./left_menu_history.php");
             } elseif ($nav_selected == "TREND") {
