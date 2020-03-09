@@ -7,7 +7,7 @@ require 'functions.php';
 require 'db_configuration.php';
 
 $query = "SELECT * FROM dishes";
-
+//list
 $GLOBALS['data'] = mysqli_query($db, $query);
 // $GLOBALS['ID'] = mysqli_query($db, $query);
 // $GLOBALS['Name'] = mysqli_query($db, $query);
