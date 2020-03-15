@@ -45,7 +45,7 @@
 	<h3>Team Members</h3>
 	<p>
 		<ul>
-      <li>Siva Jasthi (siva.jasthi@metrostate.edu) </li>
+      <li>Siva Jasthi </li>
       <li>Ahmed Farah </li>
       <li>Danny Mulenda </li>
       <li>Dylon Lowinske </li>
