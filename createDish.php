@@ -94,7 +94,7 @@
 
             
             <!-- Status -->
-            <tr>
+            <!-- <tr>
             <td style="width:100px">Status:</td>
                 <td>
                 <input list="status" name="myStatus" maxlength="50" size="50" paddin: 100px />
@@ -104,6 +104,10 @@
                 <option value="Reviewed">
                 </datalist>
                 </td>
+            </tr> -->
+            <tr>
+                <td style="width:100px">Status:</td>
+                <td><input name="Status" maxlength="60" height="200" size="50" required title="Please enter the status."></td>
             </tr>
 			 <!-- Notes -->
             <tr>

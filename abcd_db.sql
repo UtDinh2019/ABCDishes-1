@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2020 at 02:49 AM
+-- Generation Time: Mar 17, 2020 at 01:33 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- PHP Version: 7.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `adcdishes_db`
+-- Database: `abcd_db`
 --
 
 -- --------------------------------------------------------
@@ -35,20 +35,21 @@ CREATE TABLE `dishes` (
   `State` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `Country` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `Description` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Receipe_links` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Recipe_links` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `Video_links` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `Status` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Notes` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `Notes` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Image` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `dishes`
 --
 
-INSERT INTO `dishes` (`ID`, `Name`, `Type`, `State`, `Country`, `Description`, `Receipe_links`, `Video_links`, `Status`, `Notes`) VALUES
-(1, 'CHICKEN MAKHANI (BUTTER CHICKEN)', 'VEGETARIAN INDIAN', 'indian', 'india', 'Butter chicken is mouth-watering, tender chicken, cooked in a spiced tomato sauce. It’s traditionall', 'https://www.blueosa.com/the-top-10-indian-dishes/', 'none', 'approved', 'Always make the gravy by first cooking fresh tomato, garlic, and cardamom down into a bright red pul'),
-(2, 'AMOSAS (DEEP-FRIED POTATO/VEGGIE DUMPLING)', 'Vegan', 'Michigan', 'United States', 'Spiced potatoes, onions, peas, and lentils fill traditional samosas. But sometimes, they are made wi', 'https://www.blueosa.com/the-top-10-indian-dishes/', 'none', 'approved', 'Good news for all of you Michigan food lovers and solely plant-based eaters. Indian samosas are usua'),
-(3, 'ALOO GOBI (POTATO AND CAULIFLOWER)', 'Vegan ', 'Bangalore', 'India', 'Aloo Gobi is a dry, vegan Indian dish, made with potatoes (aloo), cauliflower (gobi), and Indian spi', 'https://www.blueosa.com/the-top-10-indian-dishes/', 'None', 'In review ', 'Aloo Gobi occasionally contains kalonji and curry leaves as well. Other common ingredients include g');
+INSERT INTO `dishes` (`ID`, `Name`, `Type`, `State`, `Country`, `Description`, `Recipe_links`, `Video_links`, `Status`, `Notes`, `Image`) VALUES
+(1, 'CHICKEN MAKHANI (BUTTER CHICKEN)', 'VEGETARIAN INDIAN', 'indian', 'india', 'Butter chicken is mouth-watering, tender chicken, cooked in a spiced tomato sauce. It’s traditionall', 'https://www.blueosa.com/the-top-10-indian-dishes/', 'none', 'approved', 'Always make the gravy by first cooking fresh tomato, garlic, and cardamom down into a bright red pul', 'dish1.jfif'),
+(2, 'AMOSAS (DEEP-FRIED POTATO/VEGGIE DUMPLING)', 'Vegan', 'Michigan', 'United States', 'Spiced potatoes, onions, peas, and lentils fill traditional samosas. But sometimes, they are made wi', 'https://www.blueosa.com/the-top-10-indian-dishes/', 'none', 'approved', 'Good news for all of you Michigan food lovers and solely plant-based eaters. Indian samosas are usua', 'dish2.jfif'),
+(3, 'ALOO GOBI (POTATO AND CAULIFLOWER)', 'Vegan ', 'Bangalore', 'India', 'Aloo Gobi is a dry, vegan Indian dish, made with potatoes (aloo), cauliflower (gobi), and Indian spi', 'https://www.blueosa.com/the-top-10-indian-dishes/', 'None', 'In review ', 'Aloo Gobi occasionally contains kalonji and curry leaves as well. Other common ingredients include g', 'dish3.jfif');
 
 -- --------------------------------------------------------
 
@@ -130,7 +131,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `dishes`
 --
 ALTER TABLE `dishes`
-  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
