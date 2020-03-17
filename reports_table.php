@@ -1,3 +1,4 @@
+
 <?php
   $nav_selected = "SCANNER";
   $left_buttons = "YES";
@@ -11,6 +12,7 @@
  $queryProposed = "SELECT Status, count(*) as number FROM dishes WHERE Status = 'Proposed'";  
  $queryInReview = "SELECT Status, count(*) as number FROM dishes WHERE Status = 'In Review'";  
  $queryApproved = "SELECT Status, count(*) as number FROM dishes WHERE Status = 'Approved'";  
+ $queryRejected = "SELECT Status, count(*) as number FROM dishes WHERE Status = 'Rejected'";  
 
 
 
@@ -25,6 +27,7 @@
     <th>Proposed </th>
     <th>In Review </th>
     <th>Approved </th>
+    <th>Rejected </th>
 
   </tr>
   <tr>
@@ -46,14 +49,14 @@
     echo $row["number"];  
     ?>
     </td>
+    <td>
+    <?php
+    $row = mysqli_fetch_array(mysqli_query($con,$queryRejected));
+    echo $row["number"];  
+    ?>
+    </td>
   </tr>
 </table>
 
-
-
-
-
-
-  
 
 <?php include("./footer.php"); ?>
