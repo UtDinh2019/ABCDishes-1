@@ -13,6 +13,7 @@
  ?>  
  <!DOCTYPE html>  
  <html>  
+ <link rel="stylesheet" href="css/mainStyleSheet.css" type="text/css">
       <head>  
            <title>Summary of the Status</title>  
            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  

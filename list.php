@@ -32,6 +32,8 @@ $GLOBALS['data'] = mysqli_query($db, $query);
     //verifyLogin($page);
 ?>
 
+<link rel="stylesheet" href="css/mainStyleSheet.css" type="text/css">
+
 <style>
     #title {
         text-align: center;
