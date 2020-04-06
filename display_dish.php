@@ -13,6 +13,7 @@
   $left_selected = "";
 
   include("./nav.php");
+  include("./index_home.php");
     require 'bin/functions.php';
     require 'db_configuration.php';
    // include('header.php');
@@ -64,6 +65,10 @@ if (isset($_GET['id'])){
       <br>
       <h3>'.$row["Name"].' </h3> <br>
       
+      <div>
+       <img src="images/'.$row["Image"].'" style="width:200px;height:200px;">
+       <br>
+    </div>
 
       <div>
       <label for="id">Dish Id Number: </label> '.$row["ID"].'
@@ -104,10 +109,7 @@ if (isset($_GET['id'])){
       
     </div>
 
-    <div>
-      <label for="description">Image: </label> '.$row["Image"].'
-     
-    </div>
+    
 
 
       </form>';
@@ -115,5 +117,3 @@ if (isset($_GET['id'])){
     }
 
 ?>
-
-</div>
