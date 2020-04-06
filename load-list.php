@@ -1,15 +1,4 @@
 <?php
-	
-  $nav_selected = "COMPILE";
-  $left_buttons = "NO";
-  $left_selected = "";
-
-  include("./nav.php");
-?>
-<?php include("./footer.php"); ?>
-<link rel="stylesheet" href="css/mainStyleSheet.css" type="text/css">
-
-<?php
 
 require 'db_configuration.php';
 
@@ -39,7 +28,10 @@ Image LIKE '%".$resultFromCompile."%'";
 //list
 $GLOBALS['data'] = mysqli_query($db, $query);
 
-if(isset($_POST["compile"])) {  //when search is clicked this code runs
+if(isset($_POST["compile"])) {
+    //This is where all the compile stuff will go
+  }
+if(isset($_POST["search"])) {  //when search is clicked this code runs
   
     ?>
   
@@ -92,7 +84,6 @@ if(isset($_POST["compile"])) {  //when search is clicked this code runs
               <td><div><?php echo $Status; ?></div></span> </td>
               <td><div><?php echo $Name; ?></div></span> </td>
               <?php echo '<td><img src="images/'.$row["Image"].'">' ?>
-
               <p style="page-break-before: always">
           </tr>
               
