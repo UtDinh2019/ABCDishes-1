@@ -40,63 +40,66 @@ Image LIKE '%".$resultFromCompile."%'";
 $GLOBALS['data'] = mysqli_query($db, $query);
 
 if(isset($_POST["compile"])) {  //when search is clicked this code runs
-  
-    ?>
-  
-    
- 
-  <div id="customerTableView">
-  <table class="display" id="ceremoniesTable" style="width:100%">
-      <div class="table responsive">
-          <thead>
-          <tr>
-              <th>ID</th>
-              <th>Names</th>
-              <th>Type</th>
-              <th>State</th>
-              <th>Country</th>
-              <th>Description</th>
-              <th>Recipe links</th>
-              <th>Video links</th>                
-              <th>Status</th>
-              <th>Notes</th>
-              <th>Image</th>
-          </tr>
-          </thead>
-          <tbody>
 
-          <?php
+  
           while($row = $data->fetch_assoc()) {
-              $ID = $row["ID"];
-              $Name = $row["Name"];
-              $Type = $row["Type"];
-              $State = $row["State"];
-              $Country = $row["Country"];
-              $Description = $row["Description"];
-              $Recipe_links = $row["Recipe_links"];
-              $Video_links = $row["Video_links"];
-              $Status = $row["Status"];
-              $Notes = $row["Notes"];
-              $Image = $row["Image"];
-          ?>
+            echo '<h2 id="title">Dish Details</h2><br>';
+            echo '<form action="modifyTheDish.php" method="POST" enctype="multipart/form-data">
+            <br>
+            <h3>'.$row["Name"].' </h3> <br>
+            
+            <div>
+             <img src="images/'.$row["Image"].'" style="width:200px;height:200px;">
+             <br>
+          </div>
+      
+            <div>
+            <label for="id">Dish Id Number: </label> '.$row["ID"].'
+            
+          </div>
+      
+      
+          <div>
+            <label for="level">Type: </label> '.$row["Type"].'
+            
+          </div>
+      
+      
+          <div>
+            <label for="facilitator">State: </label> '.$row["State"].' 
+            </div>
+      
+          
+         
+          <div>
+          <label for="description">Description: </label> '.$row["Description"].'
+          
+          </div>
+          
+          <div>
+            <label for="description">Recipe_links: </label> '.$row["Recipe_links"].'
+          
+          </div>
+      
+          <div>
+            <label for="description">Video_links: </label> '.$row["Video_links"].'
+           
+          </div>
+      
+      
+          <div>
+            <label for="description">Notes: </label> '.$row["Notes"].'
+            
+          </div>
+      
+          
+          <p style="page-break-before: always">
 
-          <tr>
-              <td><?php echo $ID; ?></td>
-              <td><div><?php echo $Name; ?></div></span> </td>
-              <td><div><?php echo $Type; ?></div></span> </td>
-              <td><div><?php echo $State; ?></div></span> </td>
-              <td><div><?php echo $Country; ?></div></span> </td>
-              <td><div><?php echo $Description; ?></div></span> </td>
-              <td><div><?php echo $Recipe_links; ?></div></span> </td>
-              <td><div><?php echo $Video_links; ?></div></span> </td>
-              <td><div><?php echo $Status; ?></div></span> </td>
-              <td><div><?php echo $Name; ?></div></span> </td>
-              <?php echo '<td><img src="images/'.$row["Image"].'">' ?>
-
-              <p style="page-break-before: always">
-          </tr>
-              
-          <?php     
+      
+            </form>';
+            
+         
+        
           }//end while
 }//end if statement that checks isset
           ?>
