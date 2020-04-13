@@ -88,6 +88,11 @@ if ($result->num_rows > 0) {
         <label for="role">Role</label>
         <input type="text" class="form-control" name="role" value="'.$row["role"].'"  maxlength="255" style=width:400px required><br>
       </div>
+
+      <div>
+        <label for="role">Password</label>
+        <input type="text" class="form-control" name="hash" maxlength="255" style=width:400px ><br>
+      </div>
      
       <br>
       <div class="text-left">

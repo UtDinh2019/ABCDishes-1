@@ -73,6 +73,10 @@
                 <td style="width:100px">Role: </td>
                 <td><input type="text"  name="role" maxlength="50" size="50" required title="Please enter the role."></td>
             </tr>
+            <tr>
+                <td style="width:100px">Password: </td>
+                <td><input type="text"  name="hash" maxlength="50" size="50" required title="Please create a password."></td>
+            </tr>
 		
         </table>
 

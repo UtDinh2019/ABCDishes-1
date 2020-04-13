@@ -1,6 +1,5 @@
 <?php
 /* Main page with two forms: sign up and log in */
-$page_title = 'Quiz Master > Login';
 require 'db_configuration.php';
 ?>
 <?php
