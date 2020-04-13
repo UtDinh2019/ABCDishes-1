@@ -63,7 +63,7 @@
                 <br/>Compile</li>
             </a>
 
-            <a href="list_users.php">
+            <a href="admin.php">
               <li <?php if($nav_selected == "ADMIN"){ echo 'class="current-page"'; } ?>>
                 <img src="./images/admin.png">
                 <br/>Admin</li>

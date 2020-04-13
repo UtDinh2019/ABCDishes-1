@@ -2,7 +2,8 @@
 
 require 'db_configuration.php';
 
-
+$page="list.php";
+    verifyLogin($page);
 
 if(isset($_POST["name"])){
 $resultFromCompile = $_POST["name"];
