@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2020 at 09:47 PM
+-- Generation Time: Apr 21, 2020 at 02:21 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.27
 
@@ -368,8 +368,8 @@ CREATE TABLE `preferences` (
 --
 
 INSERT INTO `preferences` (`id`, `name`, `value`, `comments`) VALUES
-(1, 'NO_OF_TOPICS_PER_ROW', 5, 'This is the number of topics, per row, on home page'),
-(2, 'NO_OF_QUESTIONS_TO_SHOW', 5, 'The number of Question per quiz');
+(1, 'NO_OF_DISHES_PER_ROW', 4, 'This is the number of topics, per row, on home page'),
+(2, 'NO_OF_DISHES_TO_SHOW', 3, 'The number of Question per quiz');
 
 -- --------------------------------------------------------
 
