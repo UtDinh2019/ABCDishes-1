@@ -1,6 +1,7 @@
 <?php
 	
   // set the current page; 
+//adding Danny 
   $nav_selected = "ABOUT";
 
   // make the left menu buttons visible; options: YES, NO
@@ -28,7 +29,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles/custom_nav.css" type="text/css">
+   <link rel="stylesheet" href="css/mainStyleSheet.css" type="text/css">
     <title>Build Summary</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -38,16 +39,22 @@
 
 <body class="body_background">
 
-<h3 style = "color: #01B0F1;">Problem Solution</h3>
 
 
 <h3 style = "color: #01B0F1;">About</h3>
 
-	<h3>Team</h3>
+	<h3>Team Members</h3>
 	<p>
 		<ul>
-      <li>Siva Jasthi (siva.jasthi@metrostate.edu) </li>
-      <li>First Last (first.last@metrostate.edu) </li>
+      <li>Siva Jasthi </li>
+      <li>Ahmed Farah </li>
+      <li>Danny Mulenda </li>
+      <li>Dylon Lowinske </li>
+      <li>Mada Midtling </li>
+      <li>UT Dinh </li>
+
+
+
       
 		</ul>
   </p>

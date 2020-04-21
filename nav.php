@@ -17,7 +17,7 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="styles/custom_nav.css" type="text/css">
-        <title>A Basic Composer</title>
+        <title>ABCDishes</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="./mainStyleSheet.css">
@@ -30,7 +30,7 @@
             <a href="index.php">
               <li class="horozontal-li-logo">
               <img src ="./images/main_logo.png">
-              <br/>A Basic Composer</li>
+              <br/>ABCDishes</li>
             </a>
 
             <a href="index.php">
@@ -42,57 +42,59 @@
             <a href="list.php">
               <li <?php if($nav_selected == "LIST"){ echo 'class="current-page"'; } ?>>
                 <img src="./images/list.png">
-                <br/>List</li>
+                <br/>List Dishes</li>
             </a>
-
-            <a href="timeline.php">
-              <li <?php if($nav_selected == "TIMELINE"){ echo 'class="current-page"'; } ?>>
-              <img src="./images/gantt.png">
-              <br/>Timeline</li>
-            </a>
-
+      
             <a href="reports.php">
               <li <?php if($nav_selected == "REPORTS"){ echo 'class="current-page"'; } ?>>
-              <img src="./images/reports.png">
-              <br/>Reports</li>
+                <img src="./images/reports_summary.png">
+                <br/>Reports</li>
             </a>
 
-            <a href="scanner.php">
-              <li <?php if($nav_selected == "SCANNER"){ echo 'class="current-page"'; } ?>>
-                <img src="./images/scanner.png">
-                <br/>Scanner</li>
+            <a href="preferences.php">
+              <li <?php if($nav_selected == "PREFERENCES"){ echo 'class="current-page"'; } ?>>
+                <img src="./images/admin_configure.png">
+                <br/>Preferences</li>
             </a>
 
-            <a href="history.php">
-              <li <?php if($nav_selected == "HISTORY"){ echo 'class="current-page"'; } ?>>
-                <img src="./images/history.png">
-                <br/>History</li>
+            <a href="compileTheBook.php">
+              <li <?php if($nav_selected == "COMPILE"){ echo 'class="current-page"'; } ?>>
+                <img src="./images/compile.png">
+                <br/>Compile</li>
             </a>
 
-            <a href="trend.php">
-              <li <?php if($nav_selected == "TREND"){ echo 'class="current-page"'; } ?>>
-                <img src="./images/trend.png">
-                <br/>Trend</li>
+            <a href="admin.php">
+              <li <?php if($nav_selected == "ADMIN"){ echo 'class="current-page"'; } ?>>
+                <img src="./images/admin.png">
+                <br/>Admin</li>
             </a>
 
 
-        <a href="setup.php">
-          <li <?php if($nav_selected == "SETUP"){ echo 'class="current-page"'; } ?>>
-            <img src="./images/setup.png">
-            <br/>Setup</li>
-        </a>
+            <a href="about.php">
+             <li <?php if($nav_selected == "ABOUT"){ echo 'class="current-page"'; } ?>>
+              <img src="./images/about.png">
+              <br/>About</li>
+            </a>
 
-        <a href="about.php">
-          <li <?php if($nav_selected == "ABOUT"){ echo 'class="current-page"'; } ?>>
-            <img src="./images/about.png">
-            <br/>About</li>
-        </a>
+            <?php  //Check if they are logged out show correct login or logout function
 
-        <a href="help.php">
-          <li <?php if($nav_selected == "HELP"){ echo 'class="current-page"'; } ?>>
-            <img src="./images/help.png">
-            <br/>help</li>
-        </a>
+            if (isset($_SESSION['logged_in'])){
+
+            echo '<a href="logout.php">
+            <li>
+             <img src="./images/logout.png">
+            <br/>Logout</li>
+            </a>';
+                    
+              
+          }else{
+          echo' <a href="loginform.php">
+          <li>
+            <img src="./images/login.png">
+            <br/>Login</li>
+            </a> ';
+        }
+        ?>
 
       </ul>
       <br />
@@ -102,7 +104,7 @@
     <table style="width:1250px">
       <tr>
         <?php
-            if ($left_buttons == "YES") {
+            if ((isset($left_buttons)) and ($left_buttons == "YES")) {
         ?>
 
         <td style="width: 120px;" valign="top">
@@ -115,8 +117,8 @@
                 include("./left_menu_timeline.php");
             } elseif ($nav_selected == "REPORTS") {
                 include("./left_menu_reports.php");
-            } elseif ($nav_selected == "SCANNER") {
-                include("./left_menu_scanner.php");
+            } elseif ($nav_selected == "Reports") {
+                include("./left_menu_Reports.php");
             } elseif ($nav_selected == "HISTORY") {
                 include("./left_menu_history.php");
             } elseif ($nav_selected == "TREND") {
@@ -136,7 +138,53 @@
         <?php
           } else {
         ?>
-        <td style="width: 100%;" valign="top">
+        <!-- <td style="width: 100%;" valign="top"> -->
         <?php
           }
         ?>
+
+
+
+
+
+<?php
+            if ((isset($admin_left_buttons)) and ($admin_left_buttons == "YES")) {
+        ?>
+
+        <td style="width: 120px;" valign="top">
+        <?php
+            if ($nav_selected == "HOME") {
+                include("./index.php");
+            } elseif ($nav_selected == "LIST") {
+                include("./left_menu_list.php");
+            } elseif ($nav_selected == "TIMELINE") {
+                include("./left_menu_timeline.php");
+            } elseif ($nav_selected == "REPORTS") {
+                include("./left_menu_reports.php");
+            } elseif ($nav_selected == "Reports") {
+                include("./left_menu_Reports.php");
+            } elseif ($nav_selected == "HISTORY") {
+                include("./left_menu_history.php");
+            } elseif ($nav_selected == "TREND") {
+              include("./left_menu_trend.php");
+           } elseif ($nav_selected == "SETUP") {
+            include("./left_menu_setup.php");
+          } elseif ($nav_selected == "ABOUT") {
+          include("./left_menu_about.php");
+          }elseif ($nav_selected == "HELP") {
+                include("./left_menu_help.php");
+            } else {
+                include("./admin_left_menu.php");
+            }
+        ?>
+        </td>
+        <td style="width: 1100px;" valign="top">
+        <?php
+          } else {
+        ?>
+        <!-- <td style="width: 100%;" valign="top"> -->
+        <?php
+          }
+        ?>
+
+        
