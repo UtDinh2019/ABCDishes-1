@@ -77,7 +77,7 @@
                           ?>  
                      ]);  
                 var options = {  
-                      title: 'Percentage of approved  ',  
+                      title: 'Percentage of keywords  ',  
                       //is3D:true,  
                       //pieHole: 0.4  
                      };  
@@ -124,7 +124,7 @@
                           ?>  
                      ]);  
                 var options = {  
-                      title: 'Percentage of approved  ',  
+                      title: 'Percentage of types  ',  
                       //is3D:true,  
                       //pieHole: 0.4  
                      };  
