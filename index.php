@@ -193,8 +193,17 @@ if( isset( $_SESSION['logged_in'] ) || !isset($_COOKIE['numberOfRows']) ) {
         $desc = $dishes[$a]['Description'];
         // thet 3rd variable is the one that determines the length to display. 
         //It shoudld be pulled form the database and put here.
-        $descCutToLength = substr($desc,0,20); 
+        $sql1 = "SELECT `value` FROM `preferences` WHERE `name`= 'DESCRIPTION_LENGTH'";
+        $result = mysqli_query($db,$sql1);
+        if(mysqli_num_rows($result)>0){
+            while($row = mysqli_fetch_assoc($result)){
+                $lengths[] = $row;
+            }
+        }
+        $length = $lengths[0]['value'];
 
+        $descCutToLength = substr($desc,0,$length); 
+        
         
         ?>
 <style>
