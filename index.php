@@ -191,14 +191,43 @@ if( isset( $_SESSION['logged_in'] ) || !isset($_COOKIE['numberOfRows']) ) {
         $pic = $dishes[$a]['Image'];
         $id = $dishes[$a]['Id'];
         $desc = $dishes[$a]['Description'];
+        // thet 3rd variable is the one that determines the length to display. 
+        //It shoudld be pulled form the database and put here.
+        $descCutToLength = substr($desc,0,20); 
+
         
-        echo "
-        <td>
-            <a href = 'display_dish.php?id=$id&mode=Image' t+itle = $desc>
-            <img class = 'image' src='./images/$pic'  alt= $pic height=$height_grids  width=$width_grids>
-                
-            </a>
-        </td>";
+        ?>
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+
+}
+div {background-color: white;}
+
+.centered {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+    <td>
+        <a href ='display_dish.php?id=<?php echo $id; ?>&mode=Image' title = <?php echo $desc; ?>>
+            <div class="container">
+            <img class =image <?php echo "src='./images/$pic' alt= $pic height=$height_grids  width=$width_grids";?>>
+            
+            <div class="centered" style="font-size:20px"><?php echo $descCutToLength; ?></div>
+            <h3><?php echo $dish; ?></h3>
+
+            </div>
+        </a>
+    </td>
+            
+            
+        <?php 
+
         $a++;
             }
         }
