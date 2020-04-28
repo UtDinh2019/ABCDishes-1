@@ -4,7 +4,7 @@
 <?php
 
  // set the current page to one of the main buttons
-  $nav_selected = "HOME";
+  $nav_selected = "LIST";
 
   // make the left menu buttons visible; options: YES, NO
   $left_buttons = "NO";

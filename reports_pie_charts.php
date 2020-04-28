@@ -1,5 +1,5 @@
 <?php
-  $nav_selected = "SCANNER";
+  $nav_selected = "REPORTS";
   $left_buttons = "YES";
   $left_selected = "Pie Charts";
 
